@@ -1,10 +1,11 @@
 #!/bin/bash
-# myBackup: backup tuility for dev directory
 
-BACKUP_PATH="/home/ubuntu/dev"
+#my backup utility
+
+BACKUP_PATH="/home/ubuntu/dev/"
 HOME_PATH="/home/ubuntu/"
 
-DATE=`date+%d%m%Y`
+DATE=`date +%d%m%Y`
 
 BACKUP="backup_"
 EXT=".tar"
