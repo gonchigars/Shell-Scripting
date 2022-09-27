@@ -1,0 +1,17 @@
+mkdir newdir
+ls -l
+mv newdir backups
+touch backups/file1
+touch backups/file2
+
+
+find / -name "backups"
+How to avoid error / permission issues
+
+find / -name "backups" 2>/dev/null
+find / -name "*backups*" 2>/dev/null
+
+**grep command**
+grep python /Users/shashank/backups/first.txt
+
+
