@@ -1,0 +1,17 @@
+#!/bin/bash
+# myBackup: backup tuility for dev directory
+
+BACKUP_PATH="/home/ubuntu/dev"
+HOME_PATH="/home/ubuntu/"
+
+DATE=`date+%d%m%Y`
+
+BACKUP="backup_"
+EXT=".tar"
+
+FILE_NAME=$HOME_PATH$BACKUP$DATE$EXT
+
+#echo $FILE_NAME
+
+tar cfz $FILE_NAME $BACKUP_PATH
+
