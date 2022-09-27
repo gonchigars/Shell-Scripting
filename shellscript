@@ -1,0 +1,36 @@
+#!/bin/bash
+# myBackup: backup utility for dev
+
+BACKUP_PATH="/usr/ubuntu/dev"
+HOME_PATH="/usr/ubuntu/"
+
+#Get the date using date commend and assign it to variable
+# calling date command with d, m y format
+DATE=`date +%d%m%Y` 
+
+BACKUP="backup_"
+EXT=".tar"
+
+FILE_NAME=$HOME_PATH$BACKUP$DATE$EXT
+
+echo $FILE_NAME
+
+## Save the above file and try running
+## you will get permission denied error.
+
+ll myBackup
+--> only r and w no x
+
+#give user full access using chmod
+chmod u=rwx myBackup
+
+#give group and other read and execute access
+chmod go=rx myBackup
+
+ll myBackup
+--> what is the access permission now ?
+
+./myBackup
+
+
+
